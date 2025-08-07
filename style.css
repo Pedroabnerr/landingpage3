@@ -55,6 +55,38 @@ body {
     height: 90px;
 }
 
+/* Responsivo - Header Mobile */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 0.5rem 0; /* ← REDUZ DE 1rem PARA 0.5rem */
+    }
+    
+    .main-header .container {
+        flex-direction: column;
+        gap: 0.5rem; /* Reduz o gap também */
+    }
+    
+    .logo {
+        width: 110px; /* Logo um pouco menor */
+        height: 75px;  /* Logo um pouco menor */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 0.3rem 0; /* ← AINDA MENOR EM TELAS MUITO PEQUENAS */
+    }
+    
+    .main-header .container {
+        gap: 0.3rem; /* Gap ainda menor */
+    }
+    
+    .logo {
+        width: 100px; /* Logo ainda menor */
+        height: 65px;  /* Logo ainda menor */
+    }
+}
+
 .cta-button {
     background-color: var(--primary-color);
     color: #000;
@@ -626,7 +658,7 @@ section h2 {
     }
 
     .map-container {
-        padding-bottom: 75%; /* Ajusta a proporção para telas menores, deixando o mapa um pouco mais alto */
+        padding-bottom: 90%; /* Ajusta a proporção para telas menores, deixando o mapa um pouco mais alto */
     }
 } 
 /* Nova Seção: Company Experience */
@@ -742,5 +774,97 @@ section h2 {
     .video-container {
         width: 320px;
         height: 500px;
+    }
+}
+/* Company Stats - Contadores Animados */
+.company-stats {
+    display: flex;
+    gap: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    margin-left: 6rem;
+}
+
+.stat-item {
+    text-align: left;
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    
+    /* Efeito Neon nos números */
+    text-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 10px var(--primary-color);
+    
+    /* Animação de pulsação */
+    animation: numberGlow 7s ease-in-out infinite alternate;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.stat-label strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.stat-highlight {
+    color: var(--text-muted-color);
+}
+
+/* Animação do brilho dos números */
+@keyframes numberGlow {
+    from {
+         text-shadow: 
+            0 0 3px var(--primary-color),
+            0 0 6px var(--primary-color);
+    }
+    to {
+         text-shadow: 
+            0 0 5px var(--primary-color),
+            0 0 10px var(--primary-color),
+            0 0 15px var(--primary-color);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .company-stats {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .company-stats {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+    }
+    
+    .stat-label {
+        font-size: 1.1rem;
     }
 }
