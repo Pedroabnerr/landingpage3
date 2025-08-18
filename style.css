@@ -330,7 +330,7 @@ section h2 {
     background-color: var(--surface-color);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    border: 1px solid #222;
+    border: 1px solid  #D4AF37;
 }
 
 .about-content p {
@@ -723,7 +723,7 @@ color: #000;
     background-color: var(--bg-color);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    border: 1px solid #222;
+    border: 1px solid #D4AF37;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1694,4 +1694,5 @@ color: #000;
     .footer-content p {
         font-size: 0.8rem;
     }
+
 }
